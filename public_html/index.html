@@ -1,0 +1,115 @@
+<?php 
+	session_start(); 
+
+	if (!isset($_SESSION['username'])) {
+		$_SESSION['msg'] = "You must log in first";
+		('location: login.php');
+		//include_once ('login.php'); // This will insure that login.php is included only once
+	}
+
+	if (isset($_GET['logout'])) {
+		session_destroy();
+		unset($_SESSION['username']);
+		//header("location: login.php");
+		//include ('login.php');
+		include_once ('server.php'); // This will insure that login.php is included only once
+		$_SESSION['msg'] = "You must log in first";
+
+	}
+?>
+<!DOCTYPE html>
+	
+<html>
+	<head>
+		<title>Hospital Database</title>
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Poiret+One|Quicksand" rel="stylesheet">
+	</head>
+	<body>
+		<div>
+			<h2><a href="scripts/logout.php">Logout</a></h2>
+		</div>
+		<div>
+			<h1>
+				<div class="container">
+					<div class="hospital">
+						<a href="index.html" class="styledH">HOSPITAL</a>
+					</div>
+					<div class="firstpart">
+						<a href="index.html" class="styledH">DATAB</a>
+					</div>
+					<div class="secondpart">
+						<a href="index.html" class="styledH">æ</a>
+					</div>
+					<div class="thirdpart">
+						<a href="index.html" class="styledH">S</a>
+					</div>
+				</div>
+			</h1>
+			<nav>
+				<ul>
+					<li class="dropdown"><a>Add Records</a>
+						<div class="dropdown-content">
+							<a href="scripts/addrecords.php">Employee Table</a>
+							<a href="scripts/add_pat_records.php">Patient Table</a>
+						</div></li>
+					<li class="dropdown"><a>Update Records</a>
+						<div class="dropdown-content">
+							<a href="scripts/update_records.php">Employee Table</a>
+							<a href="scripts/update_pat_records.php">Patient Table</a>
+						</div></li>
+					<li class="dropdown"><a>View Records</a>
+						<div class="dropdown-content">
+							<a href="scripts/view_records.php">Employee Table</a>
+							<a href="scripts/view_pat_records.php">Patient Table</a>
+						</div></li>
+					<li class="dropdown"><a>Delete Records</a>
+						<div class="dropdown-content">
+							<a href="scripts/delete_records.php">Employee Table</a>
+							<a href="scripts/delete_pat_records.php">Patient Table</a>
+						</div></li>
+					<li class="dropdown"><a>Manage Multimedia</a>
+						<div class="dropdown-content">
+							<a href="scripts/video_upload.php">Add Video</a>
+							<a href="scripts/video_stream.php">View Videos</a>
+						</div></li>
+				</ul>
+			</nav>
+		</div>
+		<section class="purpose">
+			<h4>Purpose</h4>
+			<p>The purpose of the project is to provide us with a practical experience in designing and developing a medium scale database management application. A hospital operation would typically entail large amount of information and data pertaining to the hospital management and operation. This information includes patients records data, doctors and nursing staff operations data, hospital administration data, medical equipments inventories data, lab tests data, and medical supplies stocks information. </p>
+		</section>
+		<section class="team-head">
+			<h3>Our Team</h3>
+		</section>
+		<section class="team">
+			<section class="team1">
+				<picture><!--Linking the image-->
+					<img class="Zach" src="media/zach.png" alt="zach"></a>
+					<p>Zachary Van Noppen</p>
+				</picture>
+			</section>
+			<section class="team2">
+				<picture><!--Linking the image-->
+					<img class="Anna" src="media/anna.png" alt="anna"></a>
+					<p>Anna Goodman</p>
+				</picture>
+			</section>
+			<section class="team3">
+				<picture><!--Linking the image-->
+					<img class="Jude" src="media/jude.png" alt="jude"></a>
+					<p>Jude Abu-Farha</p>
+				</picture>
+			</section>
+		</section>
+		<section class="ourplan">
+			<h5>Our Plan</h5>
+			<p>The scope of the project is limited to building the database structure consisting mainly of the database tables, indexes, and constraints using the DDL language. A sample hospital operation data will be populated into the database to help exercise and validate the database operations integrity and correctness using the SQL language. The project will not include building a frontend user interface. The data manipulation of the database content will be limited to using the command-line SQL language. </p>
+		</section>
+	</body>
+	<footer>
+		<p class="statement">&copy Copyright 2018. The Databaes. All Rights Reserved.</p>
+	</footer>
+</html>

@@ -1,0 +1,366 @@
+/*------------------------------------------
+---------------CSS RESET--------------------
+
+	http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+
+--------------------------------------------
+------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*------------------------------------------
+--------------------------------------------
+				STYLES
+--------------------------------------------
+------------------------------------------*/
+.container {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: space-between;
+	align-items: baseline;
+	width: 100%;
+	justify-content: center;
+}
+.hospital{
+	padding-right: 20px;
+}
+
+@-webkit-keyframes bounce {
+    0% { transform: translateY(-3px)  }
+    50% { transform: translateY(3px) }
+    100% { transform: translateY(-3px) }
+}
+
+@keyframes bounce {
+    0% { transform: translateY(-3px)  }
+    50% { transform: translateY(3px) }
+    100% { transform: translateY(-3px) }
+}
+
+.secondpart {
+    -webkit-animation: bounce 1s infinite ease-in-out;
+    -o-animation: bounce 1s infinite ease-in-out;
+    -ms-animation: bounce 1s infinite ease-in-out;
+    -moz-animation: bounce 1s infinite ease-in-out;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+
+nav{
+	display: flex;
+	flex-flow: row wrap;
+	align-content: space-between;
+	background-color: black;
+	width:100%;
+
+}
+div h2 a{
+	text-decoration: none;
+	color: black;
+	font-family: 'Bungee', cursive;
+	font-size: 12pt;
+}
+div h2{
+	text-align: right;
+	padding: 20px 10% 0 0;
+	}
+div h1{
+	text-align:left;
+	width:100%;
+	padding: 10px 0 40px 0;
+}
+div h1 a{
+	font-family: 'Bungee', cursive;
+	font-size: 30pt;
+	text-decoration: none;
+	color: black;
+}
+nav ul{
+	margin: 0 15%;
+	width:75%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: baseline;
+	padding: 40px 0;
+}
+nav a{
+	text-decoration: none;
+
+	color: white;
+	font-family: 'Bungee', cursive;
+}
+nav a.styledH{
+	font-size: 24pt;
+}
+nav ul li a:hover, nav ul li a:focus{  /* HOVER AND FOCUS STATE FOR THE NAVIGATION */
+	transition: all 0.5s;
+	color: #FFCEA5;
+}
+div h2 a:hover, div h2 a:focus{  /* HOVER AND FOCUS STATE FOR LOGOUT */
+	transition: all 0.5s;
+	color: #FFCEA5;
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+		padding: 20px 0;
+    text-decoration: none;
+    display: block;
+		color: white;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 20px 16px;
+    text-decoration: none;
+    display: block;
+		color: white;
+}
+
+.dropdown-content a:hover {background-color: white;}
+
+.dropdown:hover .dropdown-content {display: block;}
+/**************************************
+		      Team
+***************************************/
+.team-head h3, .purpose h4, .ourplan h5{
+	text-transform: uppercase;
+	font-size: 20px;
+	padding-bottom: 20px;
+	padding-top: 70px;
+	text-align: center;
+	font-family: 'Bungee', cursive;
+}
+.purpose p, .ourplan p{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	text-align: left-align;
+	margin: 0 17%;
+	padding: 20px 0 70px 0;
+	line-height: 20px;
+	font-family: 'Quicksand', sans-serif;
+}
+.Zach{
+	width:220px;   /* SET IMG SIZE */
+	height:180px;
+	padding-bottom: 7px
+}
+.Anna{
+	width:220px;   /* SET IMG SIZE */
+	height:180px;
+	padding-bottom: 7px
+}
+.Jude{
+	width:220px;   /* SET IMG SIZE */
+	height:180px;
+	padding-bottom: 7px
+}
+.team{
+	display: flex;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+.team p{
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	padding-bottom: 70px;
+}
+footer{
+	padding-top: 20px;
+	background-color: black;
+}
+footer p{
+	font-family: 'Quicksand', sans-serif;
+	text-align: center;
+	line-height: 30px;
+	padding-bottom: 20px;
+	color: white;
+}
+.team-head, .team{
+	background-color: #ECFBFF;
+}
+
+/**************************************
+		      Form
+***************************************/
+.contact-title{
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+}
+
+.box{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+label,
+input{
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	width: 90%;
+	font-size: 14px;
+	margin:0;
+	font-family: 'Quicksand', sans-serif;
+	border: none;
+	padding:0;
+	height: 40px;
+
+
+}
+input{
+	padding: 5px 10px;
+}
+
+
+
+label[for="consent"]{
+	width: 100%;
+}
+textarea{
+	display: block;
+	width: 90%;
+	min-width: 90%;
+	max-width: 90%;
+	height: 150px;
+	min-height: 150px;
+	max-height: 150px;
+	font-size: 14px;
+	font-family: 'Quicksand', sans-serif;
+	border: none;
+	padding: 5px 10px;
+	margin-bottom: 10px;
+}
+.contact{
+	background-color: #ECFBFF;
+	width: 40%;
+	padding:30px;
+	margin:40px auto ;
+	margin-bottom: 100px;
+}
+button{
+	padding: 10px 20px;
+	font-size: 17px;
+	background-color: #FFCEA5;
+	font-family: 'Quicksand', sans-serif;
+	border: none;
+	outline: none;
+	float: left;
+	margin-top: 50px;
+}
+
+.questions{
+	display: flex;
+	flex-direction: row;
+
+}
+
+/* ---------------------
+------------------------
+MANAGING RECORD PAGES
+------------------------
+----------------------*/
+div.master{
+	display:flex;
+	flex-flow: column wrap;
+	align-items: center;
+	padding: 10%;
+	font-family: 'Quicksand', sans-serif;
+
+}
+.div{
+	width:75%;
+	text-align:  center;
+}
+.d1 h2{
+	text-align: center;
+	padding:0;
+	margin: 0 15%;
+	font-family: 'Bungee';
+	font-size: 24pt;
+}
+.addForm{
+	padding: 10px;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: space-around;
+}
+.addForm input{
+	margin: 5px 0;
+	width: 75%;
+	border-radius: 10px;
+}
+.addForm input[type="text"]{
+	border: 2px solid #FFCEA5;
+
+}
+.addForm input[type="submit"]{
+	text-align: center;
+
+}
+.results p{
+	padding:0;
+	margin: 0 15%;
+	text-align: center;
+}
+.d1 p.delInBox{
+	font-family: 'Quicksand';
+	font-size: 12pt;
+	text-align: center;
+	padding:0;
+	margin: 0 15%;
+}
